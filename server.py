@@ -57,28 +57,7 @@ def identification(conn,addr):
 			conn.send(pickle.dumps(["accepted",f"Здравствуйте, {name}"]))
 			with open("users.json", "w", encoding="utf-8") as f:
 				json.dump({addr[0] : {'name': name, 'password': passwd} },f)
-	# try:
-	# 	open('users.json').close()
-	# except:
-	# 	open('users.json','w').close()
-	# 	print("Here")
-	# with open('users.json','r', encoding="utf-8") as f:
-	# 	try:
-	# 		d = json.load(f)
-	# 		# conn.send(f'Здравствуйте, {name}'.encode())
-	# 		conn.send("Введите свой пароль: ".encode('utf-8'))
-	# 		passwd = conn.recv(1024).decode()
-	# 		print(passwd)
-	# 		print(self.Pswdcheck(passwd,d[ad[0]]['password']))
-	# 	except:
-	# 		conn.send('Это неизвестный пользователь. Скажите мне ваше имя: '.encode())
-	# 		name = conn.recv(1024).decode()
-	# 		conn.send(" Придумайте себе пароль:".encode())
-	# 		passwd = HashGenerator(conn.recv(1024).decode())
-	# 		with open('users.json','w', encoding="utf-8") as g:
-	# 			json.dump({ad[0] : {'name': name, 'password': passwd} },g)
-	# return ("Здравствуйте,", name,"!")
-
+	
 
 def listenClient(conn,addr):
 	identification(conn,addr)

@@ -52,16 +52,4 @@ while True:
             else: 
                 break
 sock.close()
-    # while STATUS:
-    #     if STATUS == "auth":
-    #         name = pickle.dumps(["auth", input("1")])
-    #         sock.send(name)
-    #         STATUS = None
-    #     elif STATUS == "pass":
-    #         passwd = pickle.dumps(["pass", input("2")])
-    #         sock.send(passwd)
-    #         STATUS = None
-    #     elif STATUS == "accepted":
-    #         STATUS == "typing"
-    #     # msg = input()
-    #     # sock.send(msg)
+   
